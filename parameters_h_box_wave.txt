@@ -1,0 +1,6 @@
+xlower=-1.0
+xupper=1.0
+cells_number=51
+wall_position=25
+fraction=0.4
+wall_height=0.8
