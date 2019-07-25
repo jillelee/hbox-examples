@@ -6,8 +6,8 @@ Riemann solvers for the shallow water equations.
 The available solvers are:
  * Roe - Use Roe averages to caluclate the solution to the Riemann problem
  * HLL - Use a HLL solver
- * Exact - Use a newton iteration to calculate the exact solution to the
-        Riemann problem
+ * Wave redistribution - Use a wave redistribution method to deal with the case
+    that the barrier embeded within a cell
 
 .. math::
     q_t + f(q)_x = 0
@@ -26,10 +26,10 @@ and :math:`h` is the water column height, :math:`u` the velocity and :math:`g`
 is the gravitational acceleration.
 
 :Authors:
-    Kyle T. Mandli (2009-02-05): Initial version
+    Jiao Li (2018-01-01): Initial version
 """
 # ============================================================================
-#      Copyright (C) 2009 Kyle T. Mandli <mandli@amath.washington.edu>
+#      Copyright (C) 2018 Jiao Li <jl4170@columbia.edu>
 #
 #  Distributed under the terms of the Berkeley Software Distribution (BSD)
 #  license
