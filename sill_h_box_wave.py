@@ -107,6 +107,7 @@ def setup(kernel_language='Python',use_petsc=False, outdir='./_output', solver_t
     state.q[0, :nw-5] += 0.4
     state.q[0, nw:] = 0.0 #dry state in the right of wall
     state.q[0,:] = state.q[0,:].clip(min=0)
+    state.q[1,:] = 0.0
 
     claw = pyclaw.Controller()
     claw.keep_copy = True
