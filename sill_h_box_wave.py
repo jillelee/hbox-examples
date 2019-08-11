@@ -98,12 +98,12 @@ def setup(kernel_language='Python',use_petsc=False, outdir='./_output', solver_t
     # state.aux[0,:nw-1] = bathymetry[:nw-1]
     # state.aux[0,nw-1] = bathymetry[nw-1]
     # state.aux[0,nw:] = bathymetry[nw-1:]
-    state.aux[0, :] = numpy.linspace(-0.8, -0.4, xc.shape[0], endpoint=True)
+    state.aux[0,:] = numpy.linspace(-0.8, -0.4, xc.shape[0], endpoint=True)
 
-    state.aux[1, :] = xpxc
-    state.aux[1, nw-1] = alpha * xpxc
-    state.aux[1, nw] = (1 - alpha) * xpxc
-    state.q[0, :] = 0.0 - state.aux[0, :]
+    state.aux[1,:] = xpxc
+    state.aux[1,nw-1] = alpha * xpxc
+    state.aux[1,nw] = (1 - alpha) * xpxc
+    state.q[0, :] = 0.0 - state.aux[0,:]
     state.q[0, :nw-5] += 0.4
     state.q[0, nw:] = 0.0 #dry state in the right of wall
     state.q[0,:] = state.q[0,:].clip(min=0)
